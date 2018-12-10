@@ -1,0 +1,14 @@
+# /bin/bash
+API_TOKEN=XXX
+
+curl -i -H "Authorization: $API_TOKEN" https://api.geekbot.io/v1/standups/ -d 
+'{
+  "name": "Standup",
+  "channel": "#general",
+  "time": "10:00:00",
+  "timezone": "Asia/Tokyo",
+  "wait_time": 10,
+  "days": [ "Mon", "Tue", "Wed", "Thu", "Fri" ],
+  "questions": [ { "question": "What did you do since yesterday?" }, { "question": "What will you do today?" } ],
+  "users": [ XXX ]
+}'
